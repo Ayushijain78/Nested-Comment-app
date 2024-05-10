@@ -75,7 +75,6 @@ function App() {
         handleAddComment={handleAddComment}
         handleEditComment={handleEditComment}
       />
-      <NewComment comment={comment} showInput={true} />
     </div>
   );
 }
