@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Nested-Comment-app/static/css/main.752eaf47.css",
-    "main.js": "/Nested-Comment-app/static/js/main.40d7d9a3.js",
+    "main.js": "/Nested-Comment-app/static/js/main.336f5fc3.js",
     "static/js/453.7a2757a9.chunk.js": "/Nested-Comment-app/static/js/453.7a2757a9.chunk.js",
     "index.html": "/Nested-Comment-app/index.html",
     "main.752eaf47.css.map": "/Nested-Comment-app/static/css/main.752eaf47.css.map",
-    "main.40d7d9a3.js.map": "/Nested-Comment-app/static/js/main.40d7d9a3.js.map",
+    "main.336f5fc3.js.map": "/Nested-Comment-app/static/js/main.336f5fc3.js.map",
     "453.7a2757a9.chunk.js.map": "/Nested-Comment-app/static/js/453.7a2757a9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.752eaf47.css",
-    "static/js/main.40d7d9a3.js"
+    "static/js/main.336f5fc3.js"
   ]
 }
