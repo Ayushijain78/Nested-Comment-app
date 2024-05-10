@@ -1,23 +1,81 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import "./App.css";
+import Comments from "./components/Comments";
+import useCustomHook from "./hooks/useCustomHook";
+import "./components/test.js";
+import NewComment from "./components/NewComment.jsx";
+const comment = {
+  id: 1,
+  items: [
+    {
+      id: 2,
+      message: "hello",
+      items: [
+        {
+          id: 33,
+          message: "bye!!",
+          items:[]
+        },
+        {
+          id: 332,
+          message: "bye22!!",
+          items:[]
+        },
+      ],
+    },
+    {
+      id: 222,
+      message: "hello",
+      items: [
+        {
+          id: 32223,
+          message: "bye!!",
+          items:[]
+        },
+        {
+          id: 332222,
+          message: "bye22!!",
+          items:[]
+        },
+      ],
+    },
+  ],
+};
 
 function App() {
+  const [commentsData, setCommentsData] = useState(comment);
+  const { insertComment, deleteComment, editComment } = useCustomHook();
+
+  const handleDeleteComment = (commentId) => {
+    const updatedComments = deleteComment(commentsData, commentId);
+    const newcomm = { ...updatedComments };
+    localStorage.setItem("comments", JSON.stringify(newcomm));
+    setCommentsData(newcomm);
+  };
+  const handleEditComment = (commentId, message) => {
+    const updatedComments = editComment(commentsData, commentId, message);
+    const newcomm = { ...updatedComments };
+    localStorage.setItem("comments", JSON.stringify(newcomm));
+    setCommentsData(newcomm);
+  };
+  const handleAddComment = (commentId, message) => {
+    const getAddedComments = insertComment(commentsData, commentId, message);
+    const newcomm = { ...getAddedComments };
+    localStorage.setItem("comments", JSON.stringify(newcomm));
+    setCommentsData(newcomm);
+  };
+  useEffect(() => {
+    setCommentsData(JSON.parse(localStorage.getItem("comments")) || comment);
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Comments
+        handleDeleteComment={handleDeleteComment}
+        comment={commentsData}
+        handleAddComment={handleAddComment}
+        handleEditComment={handleEditComment}
+      />
+      <NewComment comment={comment} showInput={true} />
     </div>
   );
 }

@@ -1,0 +1,89 @@
+.comment-container {
+  background-color: lightblue;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  
+}
+.container {
+  margin-top: 20px;
+}
+.input-cntr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.input-box {
+  border-radius: 5px;
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding: 10px;
+  border: 1px solid grey;
+  width: 500px;
+}
+.flex {
+  display: flex;
+  gap: 5px;
+  font-size: 13px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.input-container {
+  margin-top: 20px;
+}
+.add-btn {
+  background-color: teal;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+}
+.action-cntr {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.comment-cntr {
+  background-color: teal;
+  padding: 10px;
+  color: white;
+}
+.reply-box {
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    margin: 20px;
+    padding: auto;
+  }
+  .input-container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+  }
+  .input-box {
+    border-radius: 5px;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 10px;
+    border: 1px solid grey;
+    width: 100%;
+  }
+  .comment-container {
+    background-color: lightblue;
+  }
+}
