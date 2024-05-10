@@ -3,7 +3,7 @@ import "./App.css";
 import Comments from "./components/Comments";
 import useCustomHook from "./hooks/useCustomHook";
 import "./components/test.js";
-import NewComment from "./components/NewComment.jsx";
+
 const comment = {
   id: 1,
   items: [
